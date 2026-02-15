@@ -24,8 +24,8 @@
     </header>
     <main>
         <section id="pak-drama" class="Drama">
-            <h2>Dramas</h2>
-            <p>Lorem ipsum dolor  <span>Oli goli ami veshe choli</span>sit amet consectetur adipisicing elit.</p>
+            <h2>Dramas  <span>I loved</span></h2>
+            <p>Lorem ipsum dolor  <span>Oli goli ami veshe choli</span>sit amet consectetur <span>Something Something</span> adipisicing elit.</p>
             <ul>
                 <li class="romantic"><b>K</b>huda Aur Mohabbat </li>
                 <li id="fav"><b>B</b>in Roye</li>
@@ -88,6 +88,15 @@
         for(let healthyfood of healthyFoods){
             console.log(healthyfood.innerText)
         }
+
+        // query selector all
+        const spanElements= document.querySelectorAll("#pak-drama span");
+        console.log(spanElements);
+        const spanOfP= document.querySelectorAll("#pak-drama p span");
+        console.log(spanOfP);
+        // query selector
+        const firstSpan= document.querySelector("#pak-drama span")
+        console.log(firstSpan); //selects the very first element
     </script>
     <script src="./js/hello.js"></script>
 </body>
