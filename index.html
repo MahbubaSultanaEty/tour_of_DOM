@@ -14,6 +14,12 @@
         .food .healthy{
             color: blueviolet
         }
+        .bg-violet{
+            background-color: violet;
+        }
+        .border{
+            border: 3px solid green;
+        }
     </style>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -97,6 +103,20 @@
         // query selector
         const firstSpan= document.querySelector("#pak-drama span")
         console.log(firstSpan); //selects the very first element
+
+        // accessin and changing css style
+        const foodElement = document.getElementById("food-title");
+        console.log(foodElement);
+        console.log(foodElement.style.color);
+        foodElement.style.color = "white";
+        foodElement.style.backgroundColor = "black"
+        foodElement.style.borderRadius= "15px";
+        foodElement.style.padding= "3%";
+        foodElement.style.marginLeft= "20px"
+        foodElement.style.textAlign= "center";
+        
+        // class list add or remove class
+        foodElement.classList.add("border")
     </script>
     <script src="./js/hello.js"></script>
 </body>
