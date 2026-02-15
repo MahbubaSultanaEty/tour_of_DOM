@@ -4,11 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Object Model</title>
+    <style>
+        h1{
+            background-color: blanchedalmond;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header>
-        <h1>Movies</h1>
-        <h2>Dramas</h2>
+        <h1>Welcome to my DOM</h1>
+        <h1>This is my header 2</h1>
     </header>
+    <main>
+        
+        <h2>Dramas</h2>
+        <ul>
+            <li><b>K</b>huda Aur Mohabbat </li>
+            <li><b>B</b>in Roye</li>
+            <li><b>H</b>umsafar</li>
+            <li><b>M</b>ere Humsafar</li>
+        </ul>
+    </main>
+    <script>
+        console.log("Say hello to javascript DOM");
+        console.log("Document Object Model");
+        const student = {
+            name: "NaPa orfe Nasiruddin Patowary",
+            id: 121,
+            study: function (subject){
+                console.log("studying subject: ", subject);
+            }
+        }
+        // all li elements
+        const allLi = document.getElementsByTagName("li");
+        console.log(allLi);
+        for(let li of allLi){
+            console.log(li.innerText);
+            console.log(li.innerHTML)
+        }
+        // all h1 tags
+        const h1collection= document.getElementsByTagName("h1");
+        console.log(h1collection)
+        for(let h1 of h1collection){
+            console.log(h1.innerText);
+            console.log(h1.innerHTML)
+        }
+    </script>
+    <script src="./js/hello.js"></script>
 </body>
 </html>
