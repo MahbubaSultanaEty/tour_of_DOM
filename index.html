@@ -8,6 +8,12 @@
         h1{
             background-color: blanchedalmond;
         }
+        #food-title{
+            color:chartreuse
+        }
+        .food .healthy{
+            color: blueviolet
+        }
     </style>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -17,14 +23,29 @@
         <h1>This is my header 2</h1>
     </header>
     <main>
-        
-        <h2>Dramas</h2>
-        <ul>
-            <li><b>K</b>huda Aur Mohabbat </li>
-            <li><b>B</b>in Roye</li>
-            <li><b>H</b>umsafar</li>
-            <li><b>M</b>ere Humsafar</li>
-        </ul>
+        <section id="pak-drama" class="Drama">
+            <h2>Dramas</h2>
+            <p>Lorem ipsum dolor  <span>Oli goli ami veshe choli</span>sit amet consectetur adipisicing elit.</p>
+            <ul>
+                <li class="romantic"><b>K</b>huda Aur Mohabbat </li>
+                <li id="fav"><b>B</b>in Roye</li>
+                <li ><b>H</b>umsafar</li>
+                <li class="romantic"><b>M</b>ere Humsafar</li>
+                <li id="tragic"><b>K</b>haie</li>
+            </ul>
+        </section>
+        <section class="food">
+            <h1 id="food-title">Foods I Love</h1>
+            <ul >
+                <li class="healthy">carrots</li>
+                <li>potato</li>
+                <li class="healthy">fish</li>
+                <li class="healthy">chicken</li>
+                <li>fuchka</li>
+                <li>pasta</li>
+                <li>biriyani</li>
+            </ul>
+        </section>
     </main>
     <script>
         console.log("Say hello to javascript DOM");
@@ -49,6 +70,23 @@
         for(let h1 of h1collection){
             console.log(h1.innerText);
             console.log(h1.innerHTML)
+        }
+        // get by id
+        const foodTitle= document.getElementById("food-title");
+        console.log(foodTitle.innerText);
+        console.log(foodTitle.innerHTML);
+        foodTitle.innerText= "Food I love to eat";
+        console.log(foodTitle.innerText);
+
+        const favDrama= document.getElementById("fav");
+        favDrama.innerText= "Zindagi Gulzar Hain";
+        console.log(favDrama.innerText);
+
+        // get by class
+        const healthyFoods= document.getElementsByClassName("healthy");
+        console.log(healthyFoods)
+        for(let healthyfood of healthyFoods){
+            console.log(healthyfood.innerText)
         }
     </script>
     <script src="./js/hello.js"></script>
