@@ -22,3 +22,15 @@ console.log(document.getElementById('players-section').childNodes[3].childNodes[
 
 // accessing  "zindegi gulzar hain"
 console.log(document.getElementById("pak-drama").childNodes[5].childNodes[3]);
+
+
+
+// create element and set innerText or innerHTML
+const newChild = document.createElement("li");
+newChild.innerText = "new Drama";
+
+// find the parent where you will add the child
+const dramas = document.getElementById('dramas');
+
+// append the child to the parent 
+dramas.appendChild(newChild)
