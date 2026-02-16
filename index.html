@@ -17,8 +17,15 @@
         .bg-violet{
             background-color: violet;
         }
+        .color{
+            color: olivedrab;
+            background-color: bisque;
+        }
         .border{
             border: 3px solid green;
+        }
+        .italic{
+            font-style: italic;
         }
     </style>
     <link rel="stylesheet" href="./styles/style.css">
@@ -30,7 +37,7 @@
     </header>
     <main>
         <section id="pak-drama" class="Drama">
-            <h2>Dramas  <span>I loved</span></h2>
+            <h2 id="drama-title">Dramas  <span>I loved</span></h2>
             <p>Lorem ipsum dolor  <span>Oli goli ami veshe choli</span>sit amet consectetur <span>Something Something</span> adipisicing elit.</p>
             <ul>
                 <li class="romantic"><b>K</b>huda Aur Mohabbat </li>
@@ -52,62 +59,74 @@
                 <li>biriyani</li>
             </ul>
         </section>
+        <section id="countries-section">
+            <h1 id="country-title" class="country-title">countries</h1>
+            <ul>
+                <li>Soudi Arabia</li>
+                <li class="tourist-spot">Maldives</li>
+                <li class="tourist-spot">Vietnam</li>
+                <li>Nepal</li>
+                <li id="my-country">Bangladesh</li>
+            </ul>
+        </section>
     </main>
     <script>
-        console.log("Say hello to javascript DOM");
-        console.log("Document Object Model");
+        // console.log("Say hello to javascript DOM");
+        // console.log("Document Object Model");
         const student = {
             name: "NaPa orfe Nasiruddin Patowary",
             id: 121,
             study: function (subject){
-                console.log("studying subject: ", subject);
+                // console.log("studying subject: ", subject);
             }
         }
         // all li elements
         const allLi = document.getElementsByTagName("li");
-        console.log(allLi);
+        // console.log(allLi);
         for(let li of allLi){
-            console.log(li.innerText);
-            console.log(li.innerHTML)
+            // console.log(li.innerText);
+            // console.log(li.innerHTML)
         }
         // all h1 tags
         const h1collection= document.getElementsByTagName("h1");
-        console.log(h1collection)
+        // console.log(h1collection)
         for(let h1 of h1collection){
-            console.log(h1.innerText);
-            console.log(h1.innerHTML)
+            // console.log(h1.innerText);
+            // console.log(h1.innerHTML)
         }
         // get by id
         const foodTitle= document.getElementById("food-title");
-        console.log(foodTitle.innerText);
-        console.log(foodTitle.innerHTML);
+        // console.log(foodTitle.innerText);
+        // console.log(foodTitle.innerHTML);
         foodTitle.innerText= "Food I love to eat";
-        console.log(foodTitle.innerText);
+        // console.log(foodTitle.innerText);
 
         const favDrama= document.getElementById("fav");
         favDrama.innerText= "Zindagi Gulzar Hain";
-        console.log(favDrama.innerText);
+        favDrama.style.color = "darkgreen";
+        // console.log(favDrama.innerText);
 
         // get by class
         const healthyFoods= document.getElementsByClassName("healthy");
-        console.log(healthyFoods)
+        // console.log(healthyFoods);
         for(let healthyfood of healthyFoods){
-            console.log(healthyfood.innerText)
+            // console.log(healthyfood.innerText)
         }
 
         // query selector all
         const spanElements= document.querySelectorAll("#pak-drama span");
-        console.log(spanElements);
+        // console.log(spanElements);
         const spanOfP= document.querySelectorAll("#pak-drama p span");
-        console.log(spanOfP);
+        // console.log(spanOfP);
         // query selector
         const firstSpan= document.querySelector("#pak-drama span")
-        console.log(firstSpan); //selects the very first element
+        // console.log(firstSpan); //selects the very first element
 
-        // accessin and changing css style
+
+        // accessing and changing css style
         const foodElement = document.getElementById("food-title");
-        console.log(foodElement);
-        console.log(foodElement.style.color);
+        // console.log(foodElement);
+        // console.log(foodElement.style.color);
         foodElement.style.color = "white";
         foodElement.style.backgroundColor = "black"
         foodElement.style.borderRadius= "15px";
@@ -115,8 +134,34 @@
         foodElement.style.marginLeft= "20px"
         foodElement.style.textAlign= "center";
         
-        // class list add or remove class
-        foodElement.classList.add("border")
+        // class list add or remove or replace class
+        foodElement.classList.add("border");
+        foodElement.classList.remove("border");
+        // console.log(foodElement.classList);
+         foodElement.classList.toggle("bg-violet");
+        //  console.log(foodElement.classList)
+        //  console.log(foodElement.getAttribute("id"));
+        //  console.log(foodElement.getAttribute("class"));
+         foodElement.setAttribute("title", "title or tooltip by js");
+        
+        //  countries-seciton
+        const countriesH1 = document.getElementById("country-title");
+        countriesH1.innerText = "Famous countries"
+        console.log(countriesH1);
+         countriesH1.style.backgroundColor = "aquamarine";
+         countriesH1.style.border= "5px dashed white";
+         countriesH1.style.marginLeft= "100px";
+         countriesH1.style.textAlign= "center";
+         
+        //  pak-drama
+        const dramaH1= document.getElementById("drama-title");
+        dramaH1.style.marginLeft= "50px";
+        dramaH1.style.textAlign= "center";
+        dramaH1.classList.add("italic");
+        dramaH1.classList.add("color");
+        console.log(dramaH1.classList);
+        console.log(dramaH1.getAttribute);
+        console.log(dramaH1.setAttribute("title", "drama-section  "));
     </script>
     <script src="./js/hello.js"></script>
 </body>
