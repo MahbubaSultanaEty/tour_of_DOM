@@ -25,3 +25,13 @@ placeSection.appendChild(ul).appendChild(li2);
 
 // easier or shortcut way to create childs
 const bookSection = document.createElement("section");
+bookSection.innerHTML = `
+<h1>Books I already read</h1>
+    <ul>
+        <li>Opekkha </li>
+        <li>Moyurakkhi</li>
+        <li>Before we forget kindness</li>
+    </ul>
+`
+
+mainContainer.appendChild(bookSection);
